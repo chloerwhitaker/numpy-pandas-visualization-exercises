@@ -1,0 +1,13 @@
+def get_db_url(db_name):
+    from env import host, user, password
+    return f'mysql+pymysql://{user}:{password}@{host}/{db_name}'
+    
+sql = '''
+SELECT * 
+from table
+'''
+    
+url = get_db_url("database")
+
+df = pd.read_sql(sql, url)
+df   
