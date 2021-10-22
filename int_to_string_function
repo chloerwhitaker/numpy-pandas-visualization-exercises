@@ -1,0 +1,14 @@
+def change_to_string(integer):
+    word = str(integer)
+    word_list = []
+    for d in word:
+        word_list.append(d)
+        word_list.append("-")
+    word = "".join(word_list)
+    return word
+
+change_to_string(308)
+
+
+
+.apply(change_to_string)
